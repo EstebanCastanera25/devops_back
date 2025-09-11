@@ -1,0 +1,97 @@
+@token =eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJub21icmVzIjoiRXN0ZWJhbiIsImFwZWxsaWRvcyI6IkNhc3Rhw7FlcmEiLCJlbWFpbCI6ImVzdGViYW5AZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c3VhcmlvIjoiZXN0ZWJhbiIsImlhdCI6MTc1NzYzMzA2NCwiZXhwIjoxNzU3NzE5NDY0fQ.ye-RieeiPtLhFXjGjYGJ94-vU9-XvN-9J4Z9sbJnZrA
+@baseUrl = http://localhost:5300/api
+
+### Consultas
+### Registrar nuevo usuario
+POST {{baseUrl}}/auth/registrar
+Content-Type: application/json
+
+{
+  "nombres": "Esteban",
+  "apellidos": "Castañera",
+  "rol": "admin",
+  "datosContacto": {
+    "email": "esteban@gmail.com",
+    "telefono_movil": "1139010055"
+  },
+  "identificacion": {
+    "dni": 36258789
+  },
+  "login": {
+    "password": "123456"
+  }
+}
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "usuario": "esteban",
+  "password": "123456"
+}
+
+### Listar Miembros
+POST {{baseUrl}}/miembros/listar
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+}
+
+
+### Miembro por ID
+GET {{baseUrl}}/miembros/obtener/6899570c0effe96ab002d90f
+Content-Type: application/json
+Authorization: {{token}}
+
+### Eliminar un miembro
+DELETE {{baseUrl}}/miembros/eliminar/6885ccb85d9fe49266fe1856
+Content-Type: application/json
+Authorization: {{token}}
+
+### Actualizar un miembro por ID
+PUT {{baseUrl}}/miembros/687342be364081b85e9cf18a
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "nombres": "matias miguel",
+  "apellidos": "pena"
+}
+
+### Crear un miembro
+POST  {{baseUrl}}/miembros/agregar
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "nombres": "juan ",
+  "apellidos": "costabile",
+  "datosContacto": { "pais": "Argentina", "telefono_movil": "1122445566" },
+  "datosPersonales": { "genero": "otro" }
+}
+
+
+### Bajar Miembro
+PUT {{baseUrl}}/miembros/marcar-baja/688ac3dd1fa94f2c8785f14a
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "motivo_baja": "Renuncia voluntaria"
+}
+
+### Alta Miembro
+PUT {{baseUrl}}/miembros/marcar-alta/688ac3dd1fa94f2c8785f14d
+Authorization: {{token}}
+Content-Type: application/json
+
+
+
+### Exportar miembros a Excel
+GET {{baseUrl}}/miembros/exportar
+Authorization:  {{token}}
+
+PUT {{baseUrl}}/miembro/marcar-baja/68755e2a90f76dd059d7020a
+Authorization: {{token}}
+Content-Type: application/json

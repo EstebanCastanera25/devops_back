@@ -1,0 +1,44 @@
+# node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+pnpm-store/            # si usás pnpm local store
+
+# builds
+dist/
+build/
+.out/
+coverage/
+
+# environment files
+.env
+.env.*                 # ignora .env.local, .env.production, etc.
+.env.example           # este SÍ se suele versionar -> plantilla
+
+# lockfile (opcional — ver nota abajo)
+#pnpm-lock.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# logs
+logs
+*.log
+
+# misc
+*.tmp
+*.temp
+.cache/
+.vagrant/
+docker-compose.override.yml
+
+# security / keys
+*.pem
+*.key
