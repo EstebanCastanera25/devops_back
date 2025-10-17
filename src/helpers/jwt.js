@@ -1,7 +1,7 @@
 import jwt from 'jwt-simple'
 import moment from 'moment'
 
-const secret = 'devops12'
+const secret = process.env.JWT_SECRET || 'dev_secret'
 
 const createToken = (user) => {
   const payload = {
