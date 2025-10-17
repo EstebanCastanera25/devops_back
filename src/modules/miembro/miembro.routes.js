@@ -22,5 +22,7 @@ router.put('/marcar-baja/:id', auth, authorizeRoles('admin'), miembroController.
 router.put('/marcar-alta/:id', auth, authorizeRoles('admin'), miembroController.marcarComoAlta);
 router.delete('/eliminar/:id', auth, authorizeRoles('admin'), miembroController.eliminarMiembro);
 
+router.post('/registro-admin', miembroController.registroAdmin);
+
 
 export default router
