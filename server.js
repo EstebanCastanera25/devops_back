@@ -5,6 +5,7 @@ import corsMiddleware from './src/middlewares/cors.js'
 import miembroRoutes from './src/modules/miembro/miembro.routes.js'
 import authRoutes from './src/modules/auth/auth.routes.js'
 import './datadog.js';
+import tracer from 'dd-trace';
 
 
 dotenv.config()
@@ -21,7 +22,6 @@ app.disable('x-powered-by')
 app.use('/api/miembros', miembroRoutes)
 app.use('/api/auth', authRoutes)
 
-import tracer from 'dd-trace';
 app.get('/_dd-test', async (_req, res) => {
   await tracer.trace('manual.test', async () => new Promise(r => setTimeout(r, 50)));
   res.json({ ok: true });

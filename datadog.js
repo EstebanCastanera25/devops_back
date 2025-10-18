@@ -8,5 +8,6 @@ tracer.init({
   profiling: true,
   debug: true,
 });
+console.log('[dd-init] tracer inicializado');
 
 export default tracer;
