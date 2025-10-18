@@ -6,6 +6,7 @@ tracer.init({
   // opcionales:
   runtimeMetrics: true,
   profiling: true,
+  debug: true,
 });
 
 export default tracer;
