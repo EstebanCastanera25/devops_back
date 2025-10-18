@@ -1,11 +1,11 @@
-// datadog.js
-const tracer = require('dd-trace').init({
-  service: process.env.DD_SERVICE || 'devops-backend',
-  env: process.env.DD_ENV || 'production',
-  version: process.env.DD_VERSION || '1.0.0',
+import tracer from 'dd-trace';
+
+tracer.init({
   logInjection: true,
+  url: 'https://trace.agent.datadoghq.com', // agentless
+  // opcionales:
   runtimeMetrics: true,
-  profiling: true
+  profiling: true,
 });
 
-module.exports = tracer;
+export default tracer;
