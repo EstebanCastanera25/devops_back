@@ -4,7 +4,7 @@ import { connectDB } from './src/config/database.js'
 import corsMiddleware from './src/middlewares/cors.js'
 import miembroRoutes from './src/modules/miembro/miembro.routes.js'
 import authRoutes from './src/modules/auth/auth.routes.js'
-
+import tracer from 'dd-trace';
 
 dotenv.config()
 
