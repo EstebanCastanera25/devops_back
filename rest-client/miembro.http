@@ -1,5 +1,5 @@
-@token =eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJub21icmVzIjoiRXN0ZWJhbiIsImFwZWxsaWRvcyI6IkNhc3Rhw7FlcmEiLCJlbWFpbCI6ImVzdGViYW5AZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c3VhcmlvIjoiZXN0ZWJhbiIsImlhdCI6MTc1NzYzMzA2NCwiZXhwIjoxNzU3NzE5NDY0fQ.ye-RieeiPtLhFXjGjYGJ94-vU9-XvN-9J4Z9sbJnZrA
-@baseUrl = http://localhost:5300/api
+@token =eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJub21icmVzIjoiRXN0ZWJhbiIsImFwZWxsaWRvcyI6IkNhc3Rhw7FlcmEiLCJlbWFpbCI6ImVzdGViYW5AZ21haWwuY29tIiwicm9sIjoiYWRtaW4iLCJ1c3VhcmlvIjoiZXN0ZWJhbiIsImlhdCI6MTc2MDczMzE5MywiZXhwIjoxNzYwODE5NTkzfQ.3_7lE04HjyeJCGXdsERbO8TN1XeD4yB6KvTWiVKk5gs
+@baseUrl = https://devops-back-zif0.onrender.com/api
 
 ### Consultas
 ### Registrar nuevo usuario
@@ -15,10 +15,10 @@ Content-Type: application/json
     "telefono_movil": "1139010055"
   },
   "identificacion": {
-    "dni": 36258789
+    "dni": 36885588
   },
   "login": {
-    "password": "123456"
+    "password": "admin1234"
   }
 }
 ### Login
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 {
   "usuario": "esteban",
-  "password": "123456"
+  "password": "admin1234"
 }
 
 ### Listar Miembros
